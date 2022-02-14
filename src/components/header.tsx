@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import Nav from './nav';
 import { jsx, css } from '@emotion/react';
+import { Link } from 'gatsby';
 
 const Header: FunctionComponent = () => {
   return (
@@ -22,13 +23,15 @@ const Header: FunctionComponent = () => {
           }
         `}
       >
-        <h1
-          css={css`
-          color: #fff;
-          text-align: center;
-        `}
-        >Gatsby hotel</h1>
-
+        <Link
+          to='/'>
+          <h1
+            css={css`
+              color: #fff;
+              text-align: center;
+            `}
+          >Gatsby hotel</h1>
+        </Link>
         <Nav />
       </div>
     </header>

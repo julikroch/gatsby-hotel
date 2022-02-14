@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 const IndexPage = () => (
   <Layout>
     <ImageHotel />
-    
+    <HomeContent />
   </Layout>
 )
 

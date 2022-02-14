@@ -6,15 +6,17 @@ import { css } from '@emotion/react';
 
 const Text = styled.div`
     padding-top: 4rem;
-    max-width:1200px;
-    width:95%;
-    margin:0 auto;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
     text-align: justify;
+
     @media(min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 100px;
     }
+    
     p {
         line-height: 2;
     }
@@ -38,7 +40,7 @@ const HomeContent: FunctionComponent = () => {
         }
     `);
 
-    const { title, content, image } = info.allDatoCmsPage.nodes[0];
+    const { title, content, image: { fluid } } = info.allDatoCmsPage.nodes[0];
     return (
         <>
             <h2
@@ -50,7 +52,7 @@ const HomeContent: FunctionComponent = () => {
             >{title}</h2>
             <Text>
                 <p>{content}</p>
-                <Image fluid={image.fluid} alt={title} />
+                <Image fluid={fluid} alt={title} />
             </Text>
         </>
     );
