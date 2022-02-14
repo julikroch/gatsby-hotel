@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image';
 import styled from '@emotion/styled';
@@ -31,7 +31,7 @@ const ImgText = styled.div`
     }
 `;
 
-const ImageHotel = () => {
+const ImageHotel: FunctionComponent = () => {
 
     const { image } = useStaticQuery(graphql`
         query {

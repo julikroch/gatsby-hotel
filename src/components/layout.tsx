@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Helmet from 'react-helmet'
 import { jsx, Global, css } from '@emotion/react'
 import Header from './header'
 
-const Layout = (props: any) => {
+const Layout: FunctionComponent = (props: any) => {
   return (
     <>
       <Global

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 
@@ -29,7 +29,7 @@ const NavLink = styled(Link)`
     }
 `
 
-const Nav = () => {
+const Nav: FunctionComponent = () => {
     return (
         <Navbar>
             <NavLink
