@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react'
+import Nav from './nav';
 import { jsx, css } from '@emotion/react';
 
 const Header: FunctionComponent = () => {
@@ -27,6 +28,8 @@ const Header: FunctionComponent = () => {
           text-align: center;
         `}
         >Gatsby hotel</h1>
+
+        <Nav />
       </div>
     </header>
   )
