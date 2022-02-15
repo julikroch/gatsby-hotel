@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 import Helmet from 'react-helmet'
 import { jsx, Global, css } from '@emotion/react'
 import Header from './header'
+import Footer from '../components/footer';
 
 const Layout: FunctionComponent = (props: any) => {
   return (
@@ -48,6 +49,7 @@ const Layout: FunctionComponent = (props: any) => {
 
       <Header />
       {props.children}
+      <Footer />
     </>
   )
 }
