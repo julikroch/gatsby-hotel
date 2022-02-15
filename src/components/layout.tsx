@@ -56,9 +56,7 @@ const Layout: FunctionComponent = (props: any) => {
 
       <Header />
       {props.children}
-      <Footer
-        title={title}
-      />
+      <Footer title={title} />
     </>
   )
 }

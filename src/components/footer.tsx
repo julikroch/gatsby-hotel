@@ -48,8 +48,7 @@ const Footer = ({ title }) => {
                     margin: 0;
                     padding: 1rem;
                 `}
-            >
-                {title}. All rights reserved {year} &copy;.
+            >{title}. All rights reserved {year} &copy;.
             </p>
         </>
     )

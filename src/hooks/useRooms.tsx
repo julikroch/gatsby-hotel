@@ -4,7 +4,7 @@ import { Room } from '../../@types/types'
 
 const useRooms = () => {
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
         query {
             allDatoCmsRoom {
             nodes {
@@ -22,18 +22,12 @@ const useRooms = () => {
         }
     `)
 
-    return data.allDatoCmsRoom.nodes.map((room: Room) => {
+  return data.allDatoCmsRoom.nodes.map((room: Room) => {
 
-        const { title, id, content, image, slug } = room
+    const { title, id, content, image, slug } = room
 
-        return {
-            title,
-            id,
-            content,
-            image,
-            slug
-        }
-    })
+    return { title, id, content, image, slug }
+  })
 }
 
 export default useRooms;

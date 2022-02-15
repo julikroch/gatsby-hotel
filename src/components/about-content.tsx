@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-const AboutContent = () => {
+const AboutContent: FunctionComponent = () => {
 
     const Content = styled.main`
     padding-top: 4rem;

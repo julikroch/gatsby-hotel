@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const useSeo = () => {
 
-const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query {
         datoCmsSite {
             globalSeo {
