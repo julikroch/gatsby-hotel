@@ -10,7 +10,7 @@ const ToHome = styled(Link)`
     text-decoration: none;
 `;
 
-const Footer = () => {
+const Footer = ({ title }) => {
 
     const year: number = new Date().getFullYear();
 
@@ -49,7 +49,7 @@ const Footer = () => {
                     padding: 1rem;
                 `}
             >
-                All rights reserved {year} &copy;.
+                {title}. All rights reserved {year} &copy;.
             </p>
         </>
     )

@@ -24,21 +24,19 @@ const AboutContent = () => {
     }
 `;
 
-    const result = useStaticQuery(graphql`
-query {
-    allDatoCmsPage(filter: { slug: { eq: "about" }}) {
-        nodes {
-            title
-            content
-            image {
-                fluid( maxWidth: 1200) {
-                    ...GatsbyDatoCmsFluid
+    const result = useStaticQuery(graphql` query {
+        allDatoCmsPage(filter: { slug: { eq: "about" }}) {
+            nodes {
+                title
+                content
+                image {
+                    fluid( maxWidth: 1200) {
+                        ...GatsbyDatoCmsFluid
+                    }
                 }
             }
         }
-    }
-}
-`);
+    }`);
 
     const { title, content, image: { fluid } } = result.allDatoCmsPage.nodes[0];
 

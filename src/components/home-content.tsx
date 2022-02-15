@@ -24,21 +24,19 @@ const Text = styled.div`
 
 
 const HomeContent: FunctionComponent = () => {
-    const info = useStaticQuery(graphql`
-        query {
-            allDatoCmsPage(filter: { slug: { eq: "home" }}) {
-                nodes {
-                    title
-                    content
-                    image {
-                        fluid {
-                            ...GatsbyDatoCmsFluid
-                        }
+    const info = useStaticQuery(graphql` query {
+        allDatoCmsPage(filter: { slug: { eq: "home" }}) {
+            nodes {
+                title
+                content
+                image {
+                    fluid {
+                        ...GatsbyDatoCmsFluid
                     }
                 }
             }
         }
-    `);
+    }`);
 
     const { title, content, image: { fluid } } = info.allDatoCmsPage.nodes[0];
     return (
